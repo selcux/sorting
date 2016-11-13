@@ -1,5 +1,5 @@
 Various sorting implementations in Elixir language.
 
-- [ ] Merge sort
+- [x] Merge sort
 - [ ] Quick sort
 - [ ] Bubble sort
