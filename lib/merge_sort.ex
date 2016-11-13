@@ -4,7 +4,7 @@ defmodule MergeSort do
   def sort(list) do
     {left, right} = Enum.split(list, div(length(list), 2))
     # Erlang module :lisit.merge can also be used.
-    # :lists.merge( merge_sort(left), merge_sort(right))
+    # :lists.merge(sort(left), sort(right))
     do_sort(sort(left), sort(right))
   end
 
