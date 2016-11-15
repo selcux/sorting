@@ -1,5 +1,4 @@
 defmodule BubbleSort do
-  @moduledoc false
 
   def sort(list) when length(list) <= 1, do: list
 
