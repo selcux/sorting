@@ -5,7 +5,8 @@ defmodule BubbleSort do
   def sort(list) do
     do_sort(list, [])
   end
-  
+
+
   defp do_sort([x], acc), do: [x | acc]
 
   defp do_sort(list, acc) do
@@ -15,6 +16,7 @@ defmodule BubbleSort do
 
     do_sort(unsorted, [last | acc])
   end
+
 
   defp shift([x]), do: [x]
   

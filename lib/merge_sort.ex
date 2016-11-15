@@ -8,7 +8,9 @@ defmodule MergeSort do
     do_sort(sort(left), sort(right))
   end
 
+
   defp do_sort(left, []), do: left
+
   defp do_sort([], right), do: right
 
   defp do_sort([hleft | tleft], [hright | tright]) when hleft <= hright do

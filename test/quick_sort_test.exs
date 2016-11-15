@@ -1,5 +1,4 @@
 defmodule QuickSortTest do
-  @moduledoc false
   use ExUnit.Case
   doctest QuickSort
 

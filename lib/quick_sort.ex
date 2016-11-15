@@ -5,12 +5,15 @@ defmodule QuickSort do
   """
 
   def sort1([]), do: []
+
   def sort1([pivot|rest]) do
     {smaller, larger} = partition(pivot, rest, [], [])
     sort1(smaller) ++ [pivot] ++ sort1(larger)
   end
-     
+
+
   defp partition(_,[],smaller,larger), do: {smaller, larger}
+
   defp partition(pivot, [h|t], smaller, larger) do
     if h <= pivot do
       partition(pivot, t, [h|smaller], larger)
@@ -18,6 +21,7 @@ defmodule QuickSort do
       partition(pivot, t, smaller, [h|larger])
     end
   end
+
 
   @doc """
   Method 2
@@ -30,11 +34,13 @@ defmodule QuickSort do
     sort2(left) ++ [h] ++ sort2(right)
   end
 
+
   @doc """
   Method 3
   """
 
   def lc_sort([]), do: []
+
   def lc_sort([pivot|rest]) do
     lc_sort(for smaller <- rest, smaller <= pivot, do: smaller)
     ++ [pivot] ++

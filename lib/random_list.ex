@@ -5,6 +5,7 @@ defmodule RandomList do
     do_generate(size, maxx, minn, [])
   end
 
+
   defp do_generate(size, _, _, acc) when length(acc) == size, do: acc
 
   defp do_generate(size, maxx, minn, acc) do
