@@ -8,16 +8,16 @@ defmodule InsertionSort do
 
   defp insert_sort(sorted, [h | t]) do
     sorted
-    |> add_sorted(h)
+    |> add_to_sorted(h)
     |> insert_sort(t)
   end
 
 
-  defp add_sorted([], x), do: [x]
+  defp add_to_sorted([], x), do: [x]
 
-  defp add_sorted([h | t], x) when x > h,
-    do: [h | add_sorted(t, x)]
+  defp add_to_sorted([h | t], x) when x > h,
+    do: [h | add_to_sorted(t, x)]
 
-  defp add_sorted([h | t], x) when x <= h,
+  defp add_to_sorted([h | t], x),
     do: [x] ++ [h | t]
 end
