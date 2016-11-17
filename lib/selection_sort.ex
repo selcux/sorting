@@ -1,9 +1,7 @@
 defmodule SelectionSort do
 	def sort([]), do: []
 
-	def sort(list) do
-		sort(list, [])
-	end
+	def sort(list), do: sort(list, [])
 
 	defp sort([], sorted), do: sorted
 

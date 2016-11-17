@@ -4,3 +4,4 @@ Various sorting implementations in Elixir language.
 - [x] Quick sort
 - [x] Bubble sort
 - [x] Insertion sort
+- [x] Selection sort
